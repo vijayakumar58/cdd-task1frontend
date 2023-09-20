@@ -8,12 +8,16 @@ const Createdata = () => {
     const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
+      name:"",
       email: "",
       password: "",
       address: "",
     },
     validate: (values) => {
       let errors = {};
+      if(values.name === ""){
+        errors.name = "Please enter name";
+      }
       if (values.email === "") {
         errors.name = "Please enter email";
       }
@@ -33,8 +37,22 @@ const Createdata = () => {
   });
   return (
     <div className="container-xl">
+        <nav className="navbar d-flex justify-content-center" >
+          <h3>Create an Account</h3>
+        </nav>
     <form onSubmit={formik.handleSubmit}>
       <div class="form-row">
+      <div class="form-group col-md-6">
+          <label for="inputName4">Name</label>
+          <input
+            type="name"
+            class="form-control"
+            id="inputName4"
+            name="name"
+            value={formik.values.name}
+            onChange={formik.handleChange}
+          />
+        </div>
         <div class="form-group col-md-6">
           <label for="inputEmail4">Email</label>
           <input

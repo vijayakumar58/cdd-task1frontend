@@ -21,6 +21,9 @@ const Viewdata = () => {
   };
   return (
     <div>
+      <nav className="navbar d-flex justify-content-center" >
+          <h3>View an Account</h3>
+        </nav>
       <>
         <div
           className="card text-left text-opacity ml-4 mr-4"
@@ -30,8 +33,9 @@ const Viewdata = () => {
           <div
             className="card-body ml-5 mr-5 bg-warning"
             style={{ fontSize: "20px" }}
-          >
-            <h5 className="card-title">Name : {datas.email}</h5>
+          > 
+            <h5 className="card-title">Name : {datas.name}</h5>
+            <h5 className="card-title">Emailid : {datas.email}</h5>
             <h5 className="card-title">Position : {datas.password}</h5>
             <h5 className="card-title">Office : {datas.address}</h5>
           </div>
