@@ -1,3 +1,3 @@
 export const env = {
-    api : "http://localhost:3000"
+    api : "https://cdd-task1backend-api.vercel.app"
 }
