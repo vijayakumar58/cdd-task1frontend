@@ -43,7 +43,7 @@ const Createdata = () => {
     <form onSubmit={formik.handleSubmit}>
       <div class="form-row">
       <div class="form-group col-md-6">
-          <label for="inputName4">Name</label>
+      <label style={{ color: "black" }}>Name</label>
           <input
             type="name"
             class="form-control"
@@ -55,22 +55,22 @@ const Createdata = () => {
           <span style={{ color: "red" }}>{formik.errors.name}</span>
         </div>
         <div class="form-group col-md-6">
-          <label for="inputEmail4">Email</label>
+          <label style={{ color: "black" }}>Email</label>
           <input
             type="email"
             class="form-control"
-            id="inputEmail4"
+            id={`${formik.errors.email ? `input-error` :``}`}
             name="email"
             value={formik.values.email}
             onChange={formik.handleChange}
           />
         </div>
         <div class="form-group col-md-6">
-          <label for="inputPassword4">Password</label>
+          <label style={{ color: "black" }}>Password</label>
           <input
             type="password"
             class="form-control"
-            id="inputPassword4"
+            id={`${formik.errors.password ? `input-error` :``}`}
             name="password"
             value={formik.values.password}
             onChange={formik.handleChange}
@@ -78,11 +78,11 @@ const Createdata = () => {
         </div>
       </div>
       <div class="form-group">
-        <label for="inputAddress">Address</label>
+        <label style={{ color: "black" }}>Address</label>
         <input
           type="text"
           class="form-control"
-          id="inputAddress"
+          id={`${formik.errors.address ? `input-error` :``}`}
           placeholder="1234 Main St"
           name="address"
           value={formik.values.address}
