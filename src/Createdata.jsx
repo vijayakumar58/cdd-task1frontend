@@ -64,6 +64,7 @@ const Createdata = () => {
             value={formik.values.email}
             onChange={formik.handleChange}
           />
+          <span style={{ color: "red" }}>{formik.errors.email}</span>
         </div>
         <div class="form-group col-md-6">
           <label style={{ color: "black" }}>Password</label>
@@ -75,6 +76,7 @@ const Createdata = () => {
             value={formik.values.password}
             onChange={formik.handleChange}
           />
+          <span style={{ color: "red" }}>{formik.errors.password}</span>
         </div>
       </div>
       <div class="form-group">
@@ -88,6 +90,7 @@ const Createdata = () => {
           value={formik.values.address}
           onChange={formik.handleChange}
         />
+        <span style={{ color: "red" }}>{formik.errors.address}</span>
       </div>
       <input className="btn btn-primary " type={"submit"} value="Submit" />
     </form>
