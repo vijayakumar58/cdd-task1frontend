@@ -47,7 +47,7 @@ const Createdata = () => {
           <input
             type="name"
             class="form-control"
-            id="inputName4"
+            id={`${formik.errors.name ? `input-error` :``}`}
             name="name"
             value={formik.values.name}
             onChange={formik.handleChange}
