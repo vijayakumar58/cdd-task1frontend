@@ -19,13 +19,13 @@ const Createdata = () => {
         errors.name = "Please enter name";
       }
       if (values.email === "") {
-        errors.name = "Please enter email";
+        errors.email = "Please enter email";
       }
       if (values.password === "") {
-        errors.name = "Please enter password";
+        errors.password = "Please enter password";
       }
       if (values.address === "") {
-        errors.name = "Please enter address";
+        errors.address = "Please enter address";
       }
       return errors;
     },
