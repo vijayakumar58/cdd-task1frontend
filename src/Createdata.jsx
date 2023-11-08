@@ -52,6 +52,7 @@ const Createdata = () => {
             value={formik.values.name}
             onChange={formik.handleChange}
           />
+          <span style={{ color: "red" }}>{formik.errors.name}</span>
         </div>
         <div class="form-group col-md-6">
           <label for="inputEmail4">Email</label>
