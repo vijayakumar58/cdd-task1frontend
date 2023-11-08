@@ -1,3 +1,3 @@
 export const env = {
-    api : "https://localhost:3000"
+    api : "https://cdd-crudbackend.onrender.com"
 }
