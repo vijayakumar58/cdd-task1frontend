@@ -21,13 +21,13 @@ const Editdata = () => {
         errors.name = "Please enter name";
       }
       if (values.email === "") {
-        errors.name = "Please enter email";
+        errors.email = "Please enter email";
       }
       if (values.password === "") {
-        errors.name = "Please enter password";
+        errors.password = "Please enter password";
       }
       if (values.address === "") {
-        errors.name = "Please enter address";
+        errors.address = "Please enter address";
       }
       return errors;
     },
@@ -61,7 +61,7 @@ const Editdata = () => {
       <form onSubmit={formik.handleSubmit}>
         <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="inputName4">Name</label>
+            <label style={{ color: "black" }}>Name</label>
             <input
               type="name"
               class="form-control"
@@ -70,9 +70,10 @@ const Editdata = () => {
               value={formik.values.name}
               onChange={formik.handleChange}
             />
+            <span style={{ color: "red" }}>{formik.errors.name}</span>
           </div>
           <div class="form-group col-md-6">
-            <label for="inputEmail4">Email</label>
+            <label style={{ color: "black" }}>Email</label>
             <input
               type="email"
               class="form-control"
@@ -81,9 +82,10 @@ const Editdata = () => {
               value={formik.values.email}
               onChange={formik.handleChange}
             />
+            <span style={{ color: "red" }}>{formik.errors.email}</span>
           </div>
           <div class="form-group col-md-6">
-            <label for="inputPassword4">Password</label>
+            <label style={{ color: "black" }}>Password</label>
             <input
               type="password"
               class="form-control"
@@ -92,10 +94,11 @@ const Editdata = () => {
               value={formik.values.password}
               onChange={formik.handleChange}
             />
+            <span style={{ color: "red" }}>{formik.errors.password}</span>
           </div>
         </div>
         <div class="form-group">
-          <label for="inputAddress">Address</label>
+          <label style={{ color: "black" }}>Address</label>
           <input
             type="text"
             class="form-control"
@@ -104,6 +107,7 @@ const Editdata = () => {
             value={formik.values.address}
             onChange={formik.handleChange}
           />
+          <span style={{ color: "red" }}>{formik.errors.address}</span>
         </div>
         <input className="btn btn-primary " type={"submit"} value="Submit" />
       </form>
